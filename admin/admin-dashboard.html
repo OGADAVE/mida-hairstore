@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MIDA HAIRSTORE Admin Dashboard</title>
+  <link rel="stylesheet" href="admin.css">
+  <script type="module" src="admin.js" defer></script>
+</head>
+<body>
+  <header class="dashboard-header">
+    <h2>MIDA HAIRSTORE Admin</h2>
+    <button id="logoutBtn">Logout</button>
+  </header>
+
+  <main class="dashboard-main">
+    <!-- ADD PRODUCT FORM -->
+    <section class="add-product">
+      <h3>Add New Product</h3>
+      <form id="addProductForm">
+        <input type="text" id="productName" placeholder="Product Name" required>
+        <input type="text" id="productPrice" placeholder="e.g 25,000" required><label for="productPrice">Price (₦)</label>
+        <textarea id="productDesc" placeholder="Description" required></textarea>
+        <input type="url" id="productLink" placeholder="WhatsApp Order Link" required>
+        <input type="file" id="productImage" accept="image/*" required>
+        <button type="submit">Add Product</button>
+        <p id="formMessage"></p>
+      </form>
+    </section>
+
+    <!-- PRODUCT LIST -->
+    <section class="product-list">
+      <h3>Current Products</h3>
+      <div id="productGrid"></div>
+    </section>
+  </main>
+</body>
+</html>

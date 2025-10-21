@@ -1,0 +1,375 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  background: #111;
+}
+
+/* HEADER */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* Logo */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 65px; /* subtle size */
+  margin-right: 10px;
+}
+
+.site-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f5d880; /* light gold */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #f5d880;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* underline expands on hover */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('images/ceo-mida.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.order-btn {
+  background: #e91e63;
+  color: #fff;
+  padding: 14px 35px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #d81b60;
+    box-shadow: 0 8px 15px rgba(216, 27, 96, 0.3);
+    transform: scale(1.05);
+}
+
+/* Product Highlights */
+.products {
+  padding: 80px 10%;
+  text-align: center;
+  background: #111;
+}
+
+.products h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.product-card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.product-card h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.product-card .price {
+  font-size: 1rem;
+  color: #f5d880;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.product-card .order-btn {
+  display: inline-block;
+  background: #e91e63;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.product-card .order-btn:hover {
+  background: #d81b60;
+}
+
+/* ABOUT SECTION */
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Circular image */
+.about-content img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  flex-shrink: 0;
+}
+
+/* Text next to image */
+.about-text {
+  max-width: 500px;
+  color: #ddd;
+}
+
+/* About section headings */
+.about h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #f5d880;
+  text-align: center;
+}
+
+/* Paragraph spacing */
+.about-text p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 100%;
+  }
+}
+
+/* 📞 CONTACT SECTION */
+.contact-section {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 80px 10%;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-section p {
+  margin: 10px 0;
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.contact-info {
+  margin-top: 25px;
+}
+
+.contact-info i {
+  color: #e91e63;
+  margin-right: 10px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #111;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-content p {
+  margin: 0;
+  font-size: 15px;
+}
+
+.footer-content p span {
+  font-weight: 600;
+}
+
+.footer-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.footer-icons a {
+  font-size: 22px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-icons a:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
+}
+
+/* Platform colors */
+.footer-icons .insta { color: #E1306C; }
+.footer-icons .whatsapp { color: #25D366; }
+.footer-icons .facebook { color: #1877F2; }
+.footer-icons .tiktok { color: #ffffff; }
+
+    /* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 28px;
+  padding: 15px 17px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5b;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
