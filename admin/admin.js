@@ -55,7 +55,7 @@ onAuthStateChanged(auth, (user) => {
 
 // -------------------- CLOUDINARY UPLOAD FUNCTION --------------------
 async function uploadToCloudinary(file) {
-  const cloudName = "Mida Hairstore"; // ✅ Example: "Mida Hairstore"
+  const cloudName = "dnjwoniyl"; // ✅ Example: "Mida Hairstore"
   const uploadPreset = "midahairstore_uploads"; // ✅ Example: "midahairstore_uploads"
 
   const formData = new FormData();
