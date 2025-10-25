@@ -1,4 +1,10 @@
+# robots.txt for MIDA HAIRSTORE
 User-agent: *
 Allow: /
 
+# Disallow admin or private sections (if you ever add them)
+Disallow: /admin/
+Disallow: /private/
+
+# Point to your sitemap
 Sitemap: https://midahairstore.com.ng/sitemap.xml
